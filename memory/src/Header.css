@@ -4,4 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #191A24;
+    border-bottom: 3px solid black;
+    border-radius: 10px;
 }
