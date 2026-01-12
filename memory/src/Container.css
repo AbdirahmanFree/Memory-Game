@@ -7,3 +7,22 @@
     background-color: #212230;
     
 }
+
+.Score-Board {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-top: 10px;
+    height: 20%;
+}
+
+.Container-Cards {
+    width: 100%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 20px;
+}
+
