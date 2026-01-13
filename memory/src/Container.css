@@ -1,10 +1,12 @@
 .Container-Main {
     display: flex;
-    height: 80%;
+    height: 90%;
     width: 100%;
     flex-direction: column;
     align-items: center;
     background-color: #212230;
+    padding: 20px;
+    overflow-y: scroll;
     
 }
 
@@ -24,5 +26,14 @@
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: repeat(3,1fr);
     gap: 20px;
+    padding: 20px;
+    
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    border: 4px solid #191A24;  
+    border-radius: 10px;
 }
 

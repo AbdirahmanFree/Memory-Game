@@ -1,8 +1,9 @@
 .Main {
  display: flex;
  flex-direction: column;
- width: 100vw;
+ min-width: 100vw;
  height: 100vh;
  background-color: #272838;
  color: #F4FAFF;
+ overflow: hidden;
 }
