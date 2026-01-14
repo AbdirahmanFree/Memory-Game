@@ -1,5 +1,5 @@
 .Header-Main {
-    width: 100%;
+    min-width: 100vw;
     height: 10%;
     display: flex;
     justify-content: center;
