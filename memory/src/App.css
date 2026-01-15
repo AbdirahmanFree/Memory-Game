@@ -5,5 +5,5 @@
  min-height: 100vh;
  background-color: #272838;
  color: #F4FAFF;
- overflow: scroll;
+ overflow: hidden
 }

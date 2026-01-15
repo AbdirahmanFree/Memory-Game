@@ -1,6 +1,6 @@
 .Header-Main {
-    min-width: 100vw;
-    height: 10%;
+    min-width: 100%;
+    min-height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
