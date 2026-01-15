@@ -11,16 +11,6 @@ function Container(){
     //const img_ids = ['4IzOgM1bfOe6k', 'B29mTiqmDxDy0']
     const giphyUrl= "https://api.giphy.com/v1/gifs/"
     const hasRun = useRef(false)
-
-    function fisherYates(array){
-        for(let i = array.length-1; i >0; i--){
-            const j = Math.floor((Math.random() * array.length))
-            let temp = array[j]
-            array[j] = array[i]
-            array[i] = temp
-        }
-        return array
-    }
     
     
     useEffect(() => {
@@ -32,7 +22,11 @@ function Container(){
                     const url = `${giphyUrl}${id}?api_key=${API_KEY}`
                     const res = await fetch(url)
                     const data = await res.json()
-                    setImages(prev => [...prev, data.data.images.original.url])
+                    setImages(prev => [...prev, {
+                        'src':data.data.images.original.url,
+                        'id': crypto.randomUUID()
+
+                    }])
                     console.log(images)
                     
                 })
@@ -50,16 +44,20 @@ function Container(){
         
         , []) 
     return (
-        <div className='Container-Main'>
+        <div className='Container-Main' id='container'>
             <div className='Score-Board'>
                 <span>Score: {score}</span>
                 <span>MaxScore: {maxScore}</span>
             </div>
             <div className='Container-Cards'>
                 {images.map(img => {
-                    console.log(img)
+                    
                     return (
-                        <img src={img} />
+                        <div>
+
+                        <Card img={img} images={images} chosen={chosen} setChosen={setChosen} score={score} setScore={setScore} maxScore={maxScore} setMaxScore={setMaxScore} setImages={setImages}/>
+                        </div>
+                        
                     )
                 })}
                 
